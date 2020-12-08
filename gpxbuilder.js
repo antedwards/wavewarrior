@@ -22,6 +22,7 @@ class GPXBuilder {
         <time>${new Date().toISOString()}</time>
     </metadata>
     <trk>
+        <name>RowboatEh</name>
         <trkseg>`;
     for (let i of this.points) {
         xml_string += `
@@ -30,7 +31,7 @@ class GPXBuilder {
             </trkpt>`;
     }
     xml_string += `
-        </trkset>
+        </trkseg>
     </trk>
 </gpx>`;
 return xml_string;
